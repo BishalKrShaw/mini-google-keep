@@ -1,0 +1,109 @@
+:root{
+  --primary-color: rgb(255, 238, 0);
+  --text-color: white;
+  --bg-color: #414141;
+  --footer-color: black;
+  --todo-bg-color: #313131;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins";
+}
+
+html, body{
+  width: 100dvw;
+  height: 100dvh;
+  scrollbar-width: none;
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+header{
+  background-color: var(--todo-bg-color);
+  color: var(--primary-color);
+  padding: 20px;
+  font-size: 1rem;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+
+main #addNotes{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--text-color);
+  font-size: 2rem;
+  background-color: var(--todo-bg-color);
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  box-shadow: 0 10px 10px #2222224d;
+}
+
+#addNotes span{
+  color: var(--primary-color);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+main #addNotes:hover{
+  transform: scale(1.2);
+}
+
+.notes{
+  margin: 30px;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--todo-bg-color);
+  color: var(--text-color);
+  width: 300px;
+  box-shadow: 0 8px 10px #2222224d;
+}
+
+.notes input, .notes textarea{
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 15px;
+  outline: none;
+  border: none;
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+.notes input{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.notes textarea{
+  font-size: 1rem;
+  scrollbar-width: none;
+}
+
+.delete{
+  text-align: end;
+}
+
+.delete button{
+  background-color: var(--bg-color);
+  padding: 5px 10px;
+  color: var(--text-color);
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
